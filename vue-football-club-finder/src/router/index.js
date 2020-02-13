@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Area from '../views/Area.vue'
 import Country from '../views/Country.vue'
+import Club from '../views/Club.vue'
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,11 @@ const routes = [{
         name: 'Country',
         component: Country,
         props: true
+    },
+    {
+        path: '/club-list',
+        name: 'Club',
+        component: Club
     },
     {
         path: '/about',
