@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Area from '../views/Area.vue'
+import Country from '../views/Country.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +10,12 @@ const routes = [{
         path: '/',
         name: 'Area',
         component: Area
+    },
+    {
+        path: '/:id/country-list/',
+        name: 'Country',
+        component: Country,
+        props: true
     },
     {
         path: '/about',

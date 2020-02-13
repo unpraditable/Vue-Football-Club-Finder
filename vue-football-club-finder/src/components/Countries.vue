@@ -3,20 +3,20 @@
   <div class="hello">
       <ul class="row list-unstyled">
         <!-- if parent Area = World -->
-        <li v-for="area in areas" :key="area.id" class="col-6 col-sm-6 col-md-3">
-            <router-link :to="`/${area.id}/country-list`"  v-if="area.ensignUrl">
-                <img :src=area.ensignUrl width="100%" :alt=area.name class="img-fluid" />
-                <p>{{area.name}}</p>
+        <li v-for="country in countries" :key="country.id" class="col-6 col-sm-6 col-md-3">
+            <router-link :to="`/${country.id}/country-list`"  v-if="country.ensignUrl">
+                <img :src=country.ensignUrl width="100%" :alt=country.name class="img-fluid" />
+                <p>{{country.name}}</p>
 
             </router-link>
-            <router-link :to="`/${area.id}/country-list`" v-else>
+            <router-link :to="`/${country.id}/country-list`" v-else>
                 <div class="blank-flag">
-                    <p>{{area.name}} Flag</p>
+                    <p>{{country.name}} Flag</p>
                 </div>
-                <p>{{area.name}}</p>
+                <p>{{country.name}}</p>
             </router-link>
         </li>
-        </ul>
+    </ul>
       
   </div>
 </template>
@@ -25,10 +25,10 @@
 import axios from 'axios';
 
 export default {
-  name: 'Areas',
+  name: 'Countries',
   data() {
     return {
-      areas: [],
+      countries: [],
       errors: []
     }
   },
@@ -41,23 +41,23 @@ export default {
         }
     }
 
+    const areaId = parseInt(this.$route.params.id);
+
     axios.get(`https://api.football-data.org/v2/areas/`, config)
     .then(response => {
       // JSON responses are automatically parsed.
-      if(this.$route.params.id) {
-        this.areas = response.data.areas.filter(area => area.parentAreaId === this.$route.params.id)
-      } else {
-          this.areas = response.data.areas.filter(area => area.parentAreaId === 2267);
-      }
+        if(this.$route.params.id) {
+            this.countries = response.data.areas.filter(country => country.parentAreaId === areaId)
+        } else {
+            this.countries = response.data.areas.filter(country => country.parentAreaId === 2267);
+        }
       
     })
     .catch(e => {
-      this.areas.push(e)
+      this.countries.push(e)
     })
 
-    console.log(this.areas);
-
-
+    console.log(this.$route.params.id)
   }
 }
 
