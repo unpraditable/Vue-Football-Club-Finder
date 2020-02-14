@@ -18,10 +18,12 @@ export default {
   },
   data() {
     return {
+      clubInfo: [],
       players: [],
       errors: []
     }
   },
+  
 
   // Fetches posts when the component is created.
   created() {
@@ -31,11 +33,14 @@ export default {
         }
     }
 
+    
+
     const clubId = parseInt(this.$route.params.clubId);
 
     axios.get(`https://api.football-data.org/v2/teams/${clubId}`, config)
     .then(response => {
-        this.players = response.data.squad;
+        this.clubInfo = response.data;
+        this.players = this.clubInfo.squad;
     })
     .catch(e => {
       this.players.push(e)

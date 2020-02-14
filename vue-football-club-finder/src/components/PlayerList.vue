@@ -1,11 +1,42 @@
 <template>
   <div class="hello">
-      <ul class="row list-unstyled">
-        <!-- if parent Area = World -->
-        <li v-for="player in players" :key="player.id" class="col-6 col-sm-6 col-md-3">
+
+    <h3>Goalkeepers</h3>
+    
+    <ul class="row list-unstyled">
+        <li v-for="player in filteredPlayers('Goalkeeper')" :key="player.id" class="col-6 col-sm-6 col-md-3" >
+            <router-link :to="`/${player.id}/country-list`" >
+                <p>{{player.name}}</p>
+            </router-link>
+        </li>
+    </ul>
+
+    <h3>Defenders</h3>
+    
+    <ul class="row list-unstyled">
+        <li v-for="player in filteredPlayers('Defender')" :key="player.id" class="col-6 col-sm-6 col-md-3">
+            <router-link :to="`/${player.id}/country-list`" >
+                <p>{{player.name}}</p>
+            </router-link>
+        </li>
+    </ul>
+
+    <h3>Midfielders</h3>
+    
+    <ul class="row list-unstyled">
+        <li v-for="player in filteredPlayers('Midfielder')" :key="player.id" class="col-6 col-sm-6 col-md-3">
+            <router-link :to="`/${player.id}/country-list`" >
+                <p>{{player.name}}</p>
+            </router-link>
+        </li>
+    </ul>
+
+    <h3>Attackers</h3>
+    
+    <ul class="row list-unstyled">
+        <li v-for="player in filteredPlayers('Attacker')" :key="player.id" class="col-6 col-sm-6 col-md-3">
             <router-link :to="`/${player.id}/country-list`">
                 <p>{{player.name}}</p>
-
             </router-link>
         </li>
     </ul>
@@ -17,7 +48,14 @@
 
 export default {
   name: 'PlayerList',
-  props: ['players'] // kebab case here available as camelcase in template
+  props: ['players'],
+  methods: {
+    filteredPlayers(position) {
+      return this.players.filter(player => {
+        return player.position == position      
+      })
+    }
+  },
 
 }
 </script>
