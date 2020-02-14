@@ -2,7 +2,7 @@
   <div class="hello">
     <ul class="row list-unstyled">
       <!-- if parent Area = World -->
-      <li v-for="area in areas" :key="area.id" class="col-12 col-sm-6 col-md-3">
+      <li v-for="area in areas" :key="area.id" class="col-12 col-sm-6 col-md-4 col-lg-3">
         <router-link :to="`/${area.id}/country-list`">
           <div class="area-card">
             <p>{{area.name}}</p>
