@@ -1,9 +1,13 @@
+@green : #42b983;
+@text-color: #2c3e50;
+@purple : rgb(42, 9, 46);
+@sky-blue: #6caee0;
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
+    color: @text-color;
 }
 
 #nav {
@@ -11,10 +15,10 @@
 
     a {
         font-weight: bold;
-        color: #2c3e50;
+        color: @text-color;
 
         &.router-link-exact-active {
-            color: #42b983;
+            color: @green;
         }
     }
 }
@@ -33,10 +37,11 @@ li {
 }
 
 a {
-    color: #42b983;
+    color: @green;
 }
 
 .area-card{
+    background-color: @sky-blue;
     border-radius: 10px;
     box-shadow: 0 1px 6px 0 rgba(0,0,0,0.3);    
     height: 150px;
@@ -45,7 +50,7 @@ a {
     justify-content: center;
     p{
         margin-bottom: 0;
-        color: rgb(97, 97, 97);
+        color: @text-color;
         font-weight: 700;
 
     }
@@ -87,7 +92,7 @@ a {
         // background-color: red;
         height: 100px;
         width: 100%;
-        background-color: #42b983;
+        background-color: @green;
     }
     .club-icon-container{
         margin-top: -35px;
@@ -111,14 +116,14 @@ a {
         align-items: center;
         justify-content: center;
         height: 70px;
-        color: #2c3e50;
+        color: @text-color;
     }
     &:hover{
         box-shadow: 0 1px 6px 0 rgba(0,0,0,0.5);    
         .club-body{
             p{
                 text-decoration: none;
-                color: darken(#2c3e50, 10%)
+                color: darken(@text-color, 10%)
             }
         }
     }
@@ -149,7 +154,7 @@ a {
             position: absolute;
             top: 15px;
             left: 15px;
-            color: #2c3e50;
+            color: @text-color;
             font-weight: 600;
         }
         img{
@@ -160,18 +165,23 @@ a {
         }
     }
     .player-body{
+        height: 70px;
+        color: @text-color;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 70px;
-        color: #2c3e50;
+        p{
+            margin-bottom: 0;
+            
+        }
     }
     &:hover{
         box-shadow: 0 1px 6px 0 rgba(0,0,0,0.5);    
         .club-body{
             h4{
                 text-decoration: none;
-                color: darken(#2c3e50, 10%)
+                color: darken(@text-color, 10%)
             }
         }
     }
@@ -188,7 +198,7 @@ a {
 
 .club-page{
     .club-banner{
-        background-color: #42b983;
+        background-color: @green;
         height: 200px;
         width: 100%;
         display: flex;
@@ -244,5 +254,25 @@ a {
                 }
             }
         }
+    }
+}
+
+.banner{
+    height: 125px;
+    margin-bottom: 30px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    h1{
+        @media only screen and (min-width: 768px) {
+            text-align: left;
+        }
+    }
+    &.club-list-banner{
+        background-color: @purple;
+    }
+    &.country-list-banner{
+        background-color: @sky-blue;
     }
 }

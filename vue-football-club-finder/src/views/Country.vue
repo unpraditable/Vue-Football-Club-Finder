@@ -1,7 +1,11 @@
 <template>
   <div class="home">
-    <h1>Find Football Club Here</h1>
-    <h2>Select Your Country</h2>
+    
+    <header class="banner country-list-banner">
+      <div class="container">
+        <h1>Countries</h1>
+      </div>
+    </header>
     <div class="container">
       <Countries />
     </div>

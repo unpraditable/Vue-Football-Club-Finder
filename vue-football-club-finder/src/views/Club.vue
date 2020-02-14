@@ -1,7 +1,10 @@
 <template>
-  <div class="home">
-    <h1>Find Football Club Here</h1>
-    <h2>Select Your Club</h2>
+  <div class="club-list-page">
+    <header class="banner club-list-banner">
+      <div class="container">
+        <h1>Football Clubs</h1>
+      </div>
+    </header>
     <div class="container">
       <Clubs />
     </div>

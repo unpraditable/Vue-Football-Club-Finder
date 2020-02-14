@@ -16,6 +16,7 @@
 
 <script>
   import axios from 'axios';
+  const areaWithCountries = [2001, 2159, 2014, 2077, 2220, 2175] //list area yang di dalamnya memiliki negara
 
   export default {
     name: 'Areas',
@@ -36,12 +37,8 @@
 
       axios.get(`https://api.football-data.org/v2/areas/`, config)
         .then(response => {
-          // JSON responses are automatically parsed.
-          if (this.$route.params.id) {
-            this.areas = response.data.areas.filter(area => area.parentAreaId === this.$route.params.id)
-          } else {
-            this.areas = response.data.areas.filter(area => area.parentAreaId === 2267);
-          }
+          
+          this.areas = response.data.areas.filter(area => area.parentAreaId === 2267 && areaWithCountries.includes(area.id));
 
         })
         .catch(e => {

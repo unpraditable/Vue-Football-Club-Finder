@@ -14,6 +14,7 @@
                 <h4>{{player.shirtNumber}}</h4>
               </header>
               <div class="player-body">
+                <p><b>GK</b></p>
                 <p>{{player.name}}</p>
               </div>
             </div>
@@ -36,6 +37,7 @@
                 <h4>{{player.shirtNumber}}</h4>
               </header>
               <div class="player-body">
+                <p><b>DF</b></p>
                 <p>{{player.name}}</p>
               </div>
             </div>
@@ -58,6 +60,7 @@
                 <h4>{{player.shirtNumber}}</h4>
               </header>
               <div class="player-body">
+                <p><b>MF</b></p>
                 <p>{{player.name}}</p>
               </div>
             </div>
@@ -80,6 +83,7 @@
                 <h4>{{player.shirtNumber}}</h4>
               </header>
               <div class="player-body">
+                <p><b>FW</b></p>
                 <p>{{player.name}}</p>
               </div>
             </div>
