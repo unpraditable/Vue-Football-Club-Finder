@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 import Area from '../views/Area.vue'
 import Country from '../views/Country.vue'
 import Club from '../views/Club.vue'
@@ -37,7 +36,7 @@ const routes = [{
         component: PlayerProfile,
         props: true
     },
-    
+
 ]
 
 const router = new VueRouter({
