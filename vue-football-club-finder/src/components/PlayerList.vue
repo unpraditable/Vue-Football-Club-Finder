@@ -1,4 +1,3 @@
-
 <template>
   <div class="hello">
       <ul class="row list-unstyled">
@@ -15,41 +14,12 @@
 </template>
 
 <script>
-import axios from 'axios';
 
 export default {
   name: 'PlayerList',
-  data() {
-    return {
-      players: [],
-      errors: []
-    }
-  },
+  props: ['players'] // kebab case here available as camelcase in template
 
-  // Fetches posts when the component is created.
-  created() {
-    let config = {
-        headers: {
-            "X-Auth-Token": this.api_key,
-        }
-    }
-
-    const clubId = parseInt(this.$route.params.clubId);
-
-    axios.get(`https://api.football-data.org/v2/teams/${clubId}`, config)
-    .then(response => {
-        this.players = response.data.squad;
-      
-    })
-    .catch(e => {
-      this.players.push(e)
-    })
-
-
-    // console.log(this.$route.params.id)
-  }
 }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
