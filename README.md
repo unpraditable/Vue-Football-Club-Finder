@@ -17,16 +17,16 @@ npm install
 ```
 
 After that, you can run this project
-
-### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Extra Works
+1. Separate the continents into the main area at the homepage. I think it is necessary to limit the number of country.
+2. Show only the continents/area that has a country, because I think it will be helpful for user.
+
+### Testing Environment (in General)
+So far, this project runs well with latest version of Google Chrome and Safari browser. Opened in MacBook Air with FirstMedia internet connection.
