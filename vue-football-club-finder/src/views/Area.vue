@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <header class="banner club-list-banner">
+    <header class="banner area-banner">
       <div class="container">
         <h1>Vue Football Club Finder</h1>
       </div>
