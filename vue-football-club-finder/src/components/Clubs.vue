@@ -9,7 +9,9 @@
                   <div class="club-icon-container">
                     <img :src=club.crestUrl :alt=club.name class="club-icon" />
                   </div>
-                  <p>{{club.name}}</p>
+                  <div class="club-body">
+                    <p>{{club.name}}</p>
+                  </div>
               </div>
             </router-link>
         </li>

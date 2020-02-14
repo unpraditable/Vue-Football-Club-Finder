@@ -5,8 +5,16 @@
     
     <ul class="row list-unstyled">
         <li v-for="player in filteredPlayers('Goalkeeper')" :key="player.id" class="col-6 col-sm-6 col-md-3" >
-            <router-link :to="`/${player.id}/country-list`" >
-                <p>{{player.name}}</p>
+            <router-link class="card-link" :to="`/player-profile/${player.id}`" >
+              <div class="player-card">
+                  <header>
+                    <img src="http://platform-static-files.s3.amazonaws.com/premierleague/photos/players/110x140/Photo-Missing.png" class="img-fluid" :alt=player.name />
+                    <h4>49</h4>
+                  </header>
+                  <div class="player-body">
+                     <p>{{player.name}}</p>
+                  </div>
+              </div>
             </router-link>
         </li>
     </ul>
@@ -15,8 +23,16 @@
     
     <ul class="row list-unstyled">
         <li v-for="player in filteredPlayers('Defender')" :key="player.id" class="col-6 col-sm-6 col-md-3">
-            <router-link :to="`/player-profile/${player.id}`" >
-                <p>{{player.name}}</p>
+            <router-link class="card-link" :to="`/player-profile/${player.id}`" >
+              <div class="player-card">
+                  <header>
+                    <img src="http://platform-static-files.s3.amazonaws.com/premierleague/photos/players/110x140/Photo-Missing.png" class="img-fluid" :alt=player.name />
+                    <h4>49</h4>
+                  </header>
+                  <div class="player-body">
+                     <p>{{player.name}}</p>
+                  </div>
+              </div>
             </router-link>
         </li>
     </ul>
@@ -25,8 +41,16 @@
     
     <ul class="row list-unstyled">
         <li v-for="player in filteredPlayers('Midfielder')" :key="player.id" class="col-6 col-sm-6 col-md-3">
-            <router-link :to="`/player-profile/${player.id}`" >
-                <p>{{player.name}}</p>
+            <router-link class="card-link" :to="`/player-profile/${player.id}`" >
+                <div class="player-card">
+                  <header>
+                    <img src="http://platform-static-files.s3.amazonaws.com/premierleague/photos/players/110x140/Photo-Missing.png" class="img-fluid" :alt=player.name />
+                    <h4>49</h4>
+                  </header>
+                  <div class="player-body">
+                     <p>{{player.name}}</p>
+                </div>
+              </div>
             </router-link>
         </li>
     </ul>
@@ -35,8 +59,16 @@
     
     <ul class="row list-unstyled">
         <li v-for="player in filteredPlayers('Attacker')" :key="player.id" class="col-6 col-sm-6 col-md-3">
-            <router-link :to="`/player-profile/${player.id}`" >
-                <p>{{player.name}}</p>
+            <router-link class="card-link" :to="`/player-profile/${player.id}`" >
+                <div class="player-card">
+                    <header>
+                      <img src="http://platform-static-files.s3.amazonaws.com/premierleague/photos/players/110x140/Photo-Missing.png" class="img-fluid" :alt=player.name />
+                      <h4>49</h4>
+                    </header>
+                    <div class="player-body">
+                      <p>{{player.name}}</p>
+                    </div>
+                </div>
             </router-link>
         </li>
     </ul>

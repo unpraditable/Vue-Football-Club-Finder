@@ -79,14 +79,15 @@ a {
 
 .club-card{
     border-radius: 10px;
-    border: 1px solid black;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.3);    
     overflow: hidden;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
     header{
-        background-color: red;
+        // background-color: red;
         height: 100px;
         width: 100%;
+        background-color: salmon;
     }
     .club-icon-container{
         margin-top: -35px;
@@ -94,7 +95,8 @@ a {
         width: 70px;
         height: 70px;
         border-radius: 100%;
-        border: 1px solid black;
+        box-shadow: 0 1px 6px 0 rgba(0,0,0,0.3);    
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -103,5 +105,74 @@ a {
     }
     .club-icon{
         height: 50px;
+    }
+    .club-body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        color: #2c3e50;
+    }
+    &:hover{
+        box-shadow: 0 1px 6px 0 rgba(0,0,0,0.5);    
+        .club-body{
+            p{
+                text-decoration: none;
+                color: darken(#2c3e50, 10%)
+            }
+        }
+    }
+}
+
+.player-card{
+    border-radius: 10px;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.3);    
+    overflow: hidden;
+    margin-bottom: 15px;
+
+    header{
+        // background-color: red;
+        height: 100px;
+        width: 100%;
+        background-color: #eaeaea;
+        color: white;
+        position: relative;
+        h4{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        img{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 90px;
+        }
+    }
+    .player-body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        color: #2c3e50;
+    }
+    &:hover{
+        box-shadow: 0 1px 6px 0 rgba(0,0,0,0.5);    
+        .club-body{
+            h4{
+                text-decoration: none;
+                color: darken(#2c3e50, 10%)
+            }
+        }
+    }
+}
+
+.card-link{
+    &:hover{
+        p{
+            text-decoration: none;
+        }
     }
 }
