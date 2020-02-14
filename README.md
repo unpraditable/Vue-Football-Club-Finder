@@ -6,7 +6,7 @@ First, clone this project via https:
 ```
 git clone https://github.com/unpraditable/Vue-Football-Club-Finder.git
 ```
-After you clone it, navigate to the folder where you clone the project, then change it to the vue-football-club-finder-directory
+After you clone it, navigate to the folder where you clone the project, then change it to the vue-football-club-finder-directory (careful, there is a child directory which has the same name as parent directory, the difference is the parent directory has capital letters "Vue-Football-Club-Finder-Directory")
 ```
 cd vue-football-club-finder
 ```
