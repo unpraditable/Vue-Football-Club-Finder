@@ -2,7 +2,7 @@
   <div class="club-list-page">
     <header class="banner club-list-banner">
       <div class="container">
-        <h1>Football Clubs</h1>
+        <h1>Country</h1>
       </div>
     </header>
     <div class="container">

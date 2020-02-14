@@ -4,17 +4,20 @@
       <ul class="row list-unstyled">
         <!-- if parent Area = World -->
         <li v-for="country in countries" :key="country.id" class="col-6 col-sm-6 col-md-3">
-            <router-link :to="`/club-list/`"  v-if="country.ensignUrl">
-                <img :src=country.ensignUrl width="100%" :alt=country.name class="img-fluid" />
-                <p>{{country.name}}</p>
 
+            <router-link class="card-link " :to="`/club-list/`">
+              <div class="country-card">
+                  <header></header>
+                  <div class="country-flag-container">
+                    <div v-if="country.ensignUrl" class="country-flag" :style="`background-image:url(${country.ensignUrl});`"></div>
+
+                  </div>
+                  <div class="country-body">
+                    <p>{{country.name}}</p>
+                  </div>
+              </div>
             </router-link>
-            <router-link :to="`/club-list`" v-else>
-                <div class="blank-flag">
-                    <p>{{country.name}} Flag</p>
-                </div>
-                <p>{{country.name}}</p>
-            </router-link>
+
         </li>
     </ul>
       

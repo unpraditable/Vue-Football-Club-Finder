@@ -36,6 +36,7 @@ export default {
     return {
       clubs: [],
       competitions : [],
+      country: "",
       errors: [],
       color: "black",
     }
@@ -66,16 +67,14 @@ export default {
     axios.get(`https://api.football-data.org/v2/competitions/2021/teams`, config)
     .then(response => {
         this.clubs = response.data.teams;
-      
+
     })
     .catch(e => {
       this.clubs.push(e)
     })
-    // console.log(this.$route.params.id)
   },
 
   mounted(){
-    console.log(this.getMainColor(65));
   }
 }
 
