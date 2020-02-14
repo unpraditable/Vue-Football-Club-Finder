@@ -24,33 +24,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-}
-a {
-  color: #42b983;
-}
-.blank-flag{
-    height: 200px;
-    width: 100%;
-    background-color: gray;
-    font-size: 24px;
-    text-align: center;
-    p{
-        line-height: 200px;
-        color: white;
-    }
-    @media only screen and (max-width: 480px) {
-        height: 78px;
-    }
-}
+
 </style>
 
 

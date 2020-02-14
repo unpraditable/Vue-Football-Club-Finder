@@ -33,8 +33,6 @@ export default {
         }
     }
 
-    
-
     const clubId = parseInt(this.$route.params.clubId);
 
     axios.get(`https://api.football-data.org/v2/teams/${clubId}`, config)

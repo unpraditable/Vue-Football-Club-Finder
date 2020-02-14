@@ -2,11 +2,15 @@
   <div class="hello">
       <ul class="row list-unstyled">
         <!-- if parent Area = World -->
-        <li v-for="club in clubs" :key="club.id" class="col-6 col-sm-6 col-md-3">
+        <li v-for="club in clubs" :key="club.id" class="col-6 col-sm-6 col-md-3 ">
             <router-link :to="`/club-profile/${club.id}`">
-                <img :src=club.crestUrl :alt=club.name class="img-fluid" />
-                <p>{{club.name}}</p>
-
+              <div class="club-card">
+                  <header :style="`background-color: ${club.clubColors}` "></header>
+                  <div class="club-icon-container">
+                    <img :src=club.crestUrl :alt=club.name class="club-icon" />
+                  </div>
+                  <p>{{club.name}}</p>
+              </div>
             </router-link>
         </li>
     </ul>
@@ -17,14 +21,34 @@
 <script>
 import axios from 'axios';
 
+var input = 'john smith~123 Street~Apt 4~New York~NY~12345';
+
+var fields = input.split('~');
+
+var name = fields[0];
+var street = fields[1];
+
 export default {
   name: 'Clubs',
   data() {
     return {
       clubs: [],
       competitions : [],
-      errors: []
+      errors: [],
+      color: "black",
     }
+  },
+
+  methods: {
+    getMainColor(clubId) {
+      let filteredClub = this.clubs.filter(club => {
+        return club.id == clubId      
+      })
+
+      let found = this.clubs.find(club => club.id == clubId);
+      return filteredClub;
+    }
+
   },
 
   // Fetches posts when the component is created.
@@ -45,9 +69,11 @@ export default {
     .catch(e => {
       this.clubs.push(e)
     })
-
-
     // console.log(this.$route.params.id)
+  },
+
+  mounted(){
+    console.log(this.getMainColor(65));
   }
 }
 
@@ -55,33 +81,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-}
-a {
-  color: #42b983;
-}
-.blank-flag{
-    height: 200px;
-    width: 100%;
-    background-color: gray;
-    font-size: 24px;
-    text-align: center;
-    p{
-        line-height: 200px;
-        color: white;
-    }
-    @media only screen and (max-width: 480px) {
-        height: 78px;
-    }
-}
+
 </style>
 
 

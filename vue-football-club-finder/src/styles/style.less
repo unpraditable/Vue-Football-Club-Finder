@@ -1,0 +1,83 @@
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+
+#nav {
+    padding: 30px;
+
+    a {
+        font-weight: bold;
+        color: #2c3e50;
+
+        &.router-link-exact-active {
+            color: #42b983;
+        }
+    }
+}
+
+h3 {
+    margin: 40px 0 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    color: #42b983;
+}
+
+.blank-flag {
+    height: 200px;
+    width: 100%;
+    background-color: gray;
+    font-size: 24px;
+    text-align: center;
+
+    p {
+        line-height: 200px;
+        color: white;
+    }
+
+    @media only screen and (max-width: 480px) {
+        height: 78px;
+    }
+}
+
+.club-card{
+    border-radius: 10px;
+    border: 1px solid black;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    header{
+        background-color: red;
+        height: 100px;
+        width: 100%;
+    }
+    .club-icon-container{
+        margin-top: -35px;
+        background: white;
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .club-icon{
+        height: 50px;
+    }
+}
