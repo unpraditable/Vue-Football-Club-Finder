@@ -3,7 +3,7 @@
       <ul class="row list-unstyled">
         <!-- if parent Area = World -->
         <li v-for="club in clubs" :key="club.id" class="col-6 col-sm-6 col-md-3 ">
-            <router-link :to="`/club-profile/${club.id}`">
+            <router-link class="card-link" :to="`/club-profile/${club.id}`">
               <div class="club-card">
                   <header :style="`background-color: ${club.clubColors}` "></header>
                   <div class="club-icon-container">
