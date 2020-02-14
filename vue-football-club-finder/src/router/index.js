@@ -5,6 +5,7 @@ import Area from '../views/Area.vue'
 import Country from '../views/Country.vue'
 import Club from '../views/Club.vue'
 import ClubProfile from '../views/ClubProfile.vue'
+import PlayerProfile from '../views/PlayerProfile.vue'
 
 Vue.use(VueRouter)
 
@@ -31,14 +32,12 @@ const routes = [{
         props: true
     },
     {
-        path: '/about',
-        name: 'About',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () =>
-            import ( /* webpackChunkName: "about" */ '../views/About.vue')
-    }
+        path: '/player-profile/:playerId',
+        name: 'PlayerProfile',
+        component: PlayerProfile,
+        props: true
+    },
+    
 ]
 
 const router = new VueRouter({
