@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-
     <section class="players-section">
       <h3>Goalkeepers</h3>
 
@@ -12,7 +11,7 @@
                 <img
                   src="http://platform-static-files.s3.amazonaws.com/premierleague/photos/players/110x140/Photo-Missing.png"
                   class="img-fluid" :alt=player.name />
-                <h4>49</h4>
+                <h4>{{player.shirtNumber}}</h4>
               </header>
               <div class="player-body">
                 <p>{{player.name}}</p>
@@ -34,7 +33,7 @@
                 <img
                   src="http://platform-static-files.s3.amazonaws.com/premierleague/photos/players/110x140/Photo-Missing.png"
                   class="img-fluid" :alt=player.name />
-                <h4>49</h4>
+                <h4>{{player.shirtNumber}}</h4>
               </header>
               <div class="player-body">
                 <p>{{player.name}}</p>
@@ -56,7 +55,7 @@
                 <img
                   src="http://platform-static-files.s3.amazonaws.com/premierleague/photos/players/110x140/Photo-Missing.png"
                   class="img-fluid" :alt=player.name />
-                <h4>49</h4>
+                <h4>{{player.shirtNumber}}</h4>
               </header>
               <div class="player-body">
                 <p>{{player.name}}</p>
@@ -78,7 +77,7 @@
                 <img
                   src="http://platform-static-files.s3.amazonaws.com/premierleague/photos/players/110x140/Photo-Missing.png"
                   class="img-fluid" :alt=player.name />
-                <h4>49</h4>
+                <h4>{{player.shirtNumber}}</h4>
               </header>
               <div class="player-body">
                 <p>{{player.name}}</p>

@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <h1>Find Player Here</h1>
-    <h2>Select Your Player</h2>
+    <h1>{{clubInfo.name}}</h1>
     <PlayerList :players="players" />
   </div>
 </template>
