@@ -25,9 +25,10 @@ const routes = [{
         component: Club
     },
     {
-        path: '/club-profile',
+        path: '/club-profile/:clubId',
         name: 'ClubProfile',
-        component: ClubProfile
+        component: ClubProfile,
+        props: true
     },
     {
         path: '/about',

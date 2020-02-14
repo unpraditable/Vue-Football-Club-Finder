@@ -34,9 +34,9 @@ export default {
         }
     }
 
-    // const areaId = parseInt(this.$route.params.id);
+    const clubId = parseInt(this.$route.params.clubId);
 
-    axios.get(`https://api.football-data.org/v2/teams/57`, config)
+    axios.get(`https://api.football-data.org/v2/teams/${clubId}`, config)
     .then(response => {
         this.players = response.data.squad;
       

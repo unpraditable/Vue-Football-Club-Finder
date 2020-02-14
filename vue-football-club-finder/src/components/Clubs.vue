@@ -1,10 +1,9 @@
-
 <template>
   <div class="hello">
       <ul class="row list-unstyled">
         <!-- if parent Area = World -->
         <li v-for="club in clubs" :key="club.id" class="col-6 col-sm-6 col-md-3">
-            <router-link :to="`/${club.id}/country-list`">
+            <router-link :to="`/club-profile/${club.id}`">
                 <img :src=club.crestUrl :alt=club.name class="img-fluid" />
                 <p>{{club.name}}</p>
 
@@ -23,6 +22,7 @@ export default {
   data() {
     return {
       clubs: [],
+      competitions : [],
       errors: []
     }
   },
