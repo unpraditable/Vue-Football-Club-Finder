@@ -2,7 +2,10 @@
   <div class="home">
     <h1>Find Football Club Here</h1>
     <h2>Select Your Club</h2>
-    <Clubs />
+    <div class="container">
+      <Clubs />
+    </div>
+    
   </div>
 </template>
 

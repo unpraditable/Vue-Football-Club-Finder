@@ -2,7 +2,9 @@
   <div class="home">
     <h1>Find Football Club Here</h1>
     <h2>Select Your Country</h2>
-    <Areas />
+    <div class="container">
+      <Areas />
+    </div>
   </div>
 </template>
 
