@@ -58,7 +58,7 @@
     data() {
       return {
         clubInfo: [],
-        players: [],
+        players: "Loading",
         errors: []
       }
     },

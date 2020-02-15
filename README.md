@@ -24,9 +24,10 @@ npm run serve
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### Extra Works
+### Extra Works & Limitations
 1. Separate the continents into the main area at the homepage. I think it is necessary to limit the number of country.
 2. Show only the continents/area that has a country, because I think it will be helpful for user.
+3. Because of free plan limited requests to only 10 requests per minute, I only show clubs with plan = TIER_ONE for every country.
 
 ### Testing Environment (in General)
 So far, this project runs well with latest version of Google Chrome and Safari browser. Opened in MacBook Air with FirstMedia internet connection.

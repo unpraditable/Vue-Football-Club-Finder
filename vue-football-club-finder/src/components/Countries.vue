@@ -5,7 +5,7 @@
         <!-- if parent Area = World -->
         <li v-for="country in countries" :key="country.id" class="col-6 col-sm-6 col-md-3">
 
-            <router-link class="card-link " :to="`/club-list/`">
+            <router-link class="card-link " :to="`/club-list/${country.id}`">
               <div class="country-card">
                   <header></header>
                   <div class="country-flag-container">

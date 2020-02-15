@@ -24,7 +24,7 @@ export default {
   },
   data() {
     return {
-      continent: [],
+      continent: "Loading...",
       countries: [],
       errors: []
     }

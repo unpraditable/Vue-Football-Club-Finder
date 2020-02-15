@@ -20,7 +20,7 @@ const routes = [{
         props: true
     },
     {
-        path: '/club-list',
+        path: '/club-list/:countryId',
         name: 'Club',
         component: Club
     },
