@@ -1,5 +1,6 @@
 # Vue-Football-Club-Finder
-Football Club Finder created with Vue JS framework. People can search it based on the area (countries) and competitions
+Football Club Finder created with Vue JS framework. People can search it based on the area (countries) and competitions.
+Created using https://www.football-data.org/ API for Free User.
 
 ## Project setup
 First, clone this project via https:
