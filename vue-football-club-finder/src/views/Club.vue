@@ -26,7 +26,6 @@ export default {
       clubs: [],
       country: "Loading...",
       errors: [],
-      color: "black",
     }
   },
 
@@ -42,15 +41,12 @@ export default {
   },
 
   // Fetches posts when the component is created.
-  created() {
+  created: async function() {
     let config = {
         headers: {
             "X-Auth-Token": this.api_key,
         }
     }
-
-    let competitions = [];
-
     const countryId = parseInt(this.$route.params.countryId);
     
     axios.get(`https://api.football-data.org/v2/competitions?areas=${countryId}&plan=TIER_ONE`, config)
@@ -73,8 +69,6 @@ export default {
     .catch(e => {
       console.log(e)
     })
-
-    console.log(this.clubs);
     
   }
 }

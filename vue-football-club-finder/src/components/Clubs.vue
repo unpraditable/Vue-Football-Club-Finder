@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-      <ul v-if="clubs" class="row list-unstyled">
+      <ul v-if="clubs.length" class="row list-unstyled">
         <!-- if parent Area = World -->
         <li v-for="club in clubs" :key="club.id" class="col-6 col-sm-6 col-md-3 ">
             <router-link class="card-link" :to="`/club-profile/${club.id}`">
@@ -16,7 +16,6 @@
             </router-link>
         </li>
       </ul>
-      <h2 v-else>No Clubs Found!</h2>
   </div>
 </template>
 

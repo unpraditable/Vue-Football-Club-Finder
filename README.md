@@ -29,5 +29,12 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 2. Show only the continents/area that has a country, because I think it will be helpful for user.
 3. Because of free plan limited requests to only 10 requests per minute, I only show clubs with plan = TIER_ONE for every country.
 
+### Improvement Plans
+1. Show empty message if a country has no football clubs inside club list page
+2. Show unique colors for each club in club list page and club detail page
+3. Add filter input
+4. Add breadcrumbs
+5. Fix messy and unorganized URLs
+
 ### Testing Environment (in General)
 So far, this project runs well with latest version of Google Chrome and Safari browser. Opened in MacBook Air with FirstMedia internet connection.
