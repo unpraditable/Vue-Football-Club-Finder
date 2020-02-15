@@ -28,6 +28,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 1. Separate the continents into the main area at the homepage. I think it is necessary to limit the number of country.
 2. Show only the continents/area that has a country, because I think it will be helpful for user.
 3. Because of free plan limited requests to only 10 requests per minute, I only show clubs with plan = TIER_ONE for every country.
+4. For best results, I suggest to test to search teams from top leagues firsts (England, Italy, Germany, Spain, France)
 
 ### Improvement Plans
 1. Show empty message if a country has no football clubs inside club list page
