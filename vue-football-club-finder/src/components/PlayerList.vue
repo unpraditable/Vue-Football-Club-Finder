@@ -103,16 +103,7 @@
         return this.players.filter(player => {
           return player.position == position
         })
-      },
-      filteredPlayersDebug(position) {
-        let filteredPlayer = this.players.filter(player => {
-          return player.position == position
-        })
-        return filteredPlayer;
-      },
-    },
-    created() {
-      console.log(this.filteredPlayers("Defenders"))
+      }
     }
   }
 </script>
