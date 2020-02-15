@@ -25,43 +25,10 @@
 </template>
 
 <script>
-import axios from 'axios';
 
 export default {
   name: 'Countries',
-  data() {
-    return {
-      countries: [],
-      errors: []
-    }
-  },
-
-  // Fetches posts when the component is created.
-  created() {
-    let config = {
-        headers: {
-            "X-Auth-Token": this.api_key,
-        }
-    }
-
-    const areaId = parseInt(this.$route.params.id);
-
-    axios.get(`https://api.football-data.org/v2/areas/`, config)
-    .then(response => {
-      // JSON responses are automatically parsed.
-        if(this.$route.params.id) {
-            this.countries = response.data.areas.filter(country => country.parentAreaId === areaId)
-        } else {
-            this.countries = response.data.areas.filter(country => country.parentAreaId === 2267);
-        }
-      
-    })
-    .catch(e => {
-      this.countries.push(e)
-    })
-
-    console.log(this.$route.params.id)
-  }
+  props: ['countries'],
 }
 
 </script>

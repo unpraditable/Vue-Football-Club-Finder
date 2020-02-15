@@ -63,7 +63,6 @@
       }
     },
 
-
     // Fetches posts when the component is created.
     created() {
       let config = {
