@@ -22,6 +22,8 @@ After that, you can run this project
 npm run serve
 ```
 
+Then, open the project with your browser at the localhost (usually, it will be http://localhost:8080/ )
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
