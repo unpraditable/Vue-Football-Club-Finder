@@ -1,6 +1,6 @@
 # Vue-Football-Club-Finder
 Football Club Finder created with Vue JS framework. People can search it based on the area (countries) and competitions.
-Created using https://www.football-data.org/ API for Free User.
+Created using https://www.football-data.org/ API for Free User. Available at : https://unpraditable.github.io/Vue-Football-Club-Finder/ . Or, you can simply install it locally by following these instructions: 
 
 ## Project setup
 First, clone this project via https:
