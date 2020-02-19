@@ -5,7 +5,7 @@
         <li v-for="club in clubs" :key="club.id" class="col-6 col-sm-6 col-md-3 ">
             <router-link class="card-link" :to="`/club-profile/${club.id}`">
               <div class="club-card">
-                  <header :style="`background-color: ${club.clubColors}` "></header>
+                  <header :style="`background-color: ${getMainColor(club.clubColors)}` "></header>
                   <div class="club-icon-container">
                     <img v-if="club.crestUrl" :src=club.crestUrl :alt=club.name class="club-icon" />
                   </div>
@@ -23,7 +23,15 @@
 
 export default {
   name: 'Clubs',
-  props: ['clubs']
+  props: ['clubs'],
+  methods: {
+    getMainColor(str) {
+      if (str){
+        str = str.split("/").shift();
+        return str;
+      } else {return "";}
+    } //function untuk mendapatkan main color klub untuk menyempurnakan kode nanti
+  },
 }
 
 </script>

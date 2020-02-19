@@ -29,19 +29,8 @@ export default {
     }
   },
 
-  methods: {
-    getMainColor(clubId) {
-      let filteredClub = this.clubs.filter(club => {
-        return club.id == clubId      
-      })
-
-      let found = this.clubs.find(club => club.id == clubId);
-      return filteredClub;
-    } //function untuk mendapatkan main color klub untuk menyempurnakan kode nanti
-  },
-
   // Fetches posts when the component is created.
-  created: async function() {
+  created() {
     let config = {
         headers: {
             "X-Auth-Token": this.api_key,
@@ -69,6 +58,8 @@ export default {
     .catch(e => {
       console.log(e)
     })
+
+    console.log(this.getMainColor());
     
   }
 }
